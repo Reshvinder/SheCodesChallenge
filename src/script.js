@@ -1,13 +1,18 @@
 function displaycurrenttemp (response) {
   console.log (response.data);
+
   document.querySelector ("#city-name").innerHTML = response.data.name;
   document.querySelector ("#current-temp").innerHTML = Math.round (response.data.main.temp);
   document.querySelector ("#lowest-temp").innerHTML = Math.round (response.data.main.temp_min);
   document.querySelector ("#highest-temp").innerHTML = Math.round (response.data.main.temp_max);
   document.querySelector ("#humidity").innerHTML = Math.round (response.data.main.humidity);
   document.querySelector ("#wind").innerHTML = Math.round (response.data.wind.speed);
-  document.querySelector ("#description").innerHTML = response.data.weather[0].main;
+  document.querySelector ("#description").innerHTML = response.data.weather[0].description;
+  document.querySelector ("#icon").setAttribute("src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
+
 
 
 function searchCity (city) {

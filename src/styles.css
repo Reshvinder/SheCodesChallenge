@@ -11,13 +11,6 @@ h1 {
   height: 100%;
 }
 
-.fa-cloud-showers-heavy {
-  font-size: 60px;
-  margin-top: 10px;
-  margin-left: 10px;
-  text-size-adjust: 100%;
-}
-
 h5 {
   font-weight: 900px;
   font-size: 26px;
@@ -76,8 +69,14 @@ h3 {
 #description {
   font-size: 24px;
   font-weight: 900px;
+  text-transform: capitalize;
 }
 
 #weather-advice {
   font-size: 20px;
+}
+
+#icon {
+  vertical-align: bottom;
+  margin-left: -10px;
 }
