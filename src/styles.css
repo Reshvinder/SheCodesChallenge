@@ -1,0 +1,73 @@
+body {
+  font-family: "Yusei Magic", sans-serif;
+}
+h1 {
+  color: #11698e;
+  text-align: center;
+  margin: 0;
+}
+
+.form-floating {
+  width: 50%;
+  margin: 0px 50px;
+}
+.fa-search-location {
+  font-size: 38px;
+  display: inline;
+  position: relative;
+  top: 45px;
+}
+
+.mb-3 {
+  height: 100%;
+}
+
+.fa-cloud-showers-heavy {
+  font-size: 60px;
+  width: 100%;
+}
+
+h5 {
+  font-weight: 900px;
+  font-size: 26px;
+}
+
+#current-temp {
+  font-size: 26px;
+}
+
+.units {
+  position: relative;
+  top: -8px;
+}
+
+#umbrella-image {
+  border-radius: 30px;
+  width: 100%;
+  margin: auto;
+}
+
+h3 {
+  margin-top: 15px;
+}
+
+.fa-sun {
+  font-size: 50px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.weather {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+#current-location-button {
+  position: relative;
+  left: 400px;
+  bottom: 75px;
+  line-height: 44px;
+}
