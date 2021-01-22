@@ -20,18 +20,29 @@
                 <i class="fas fa-rainbow"></i>
                 Weather On The Go....
             </h1>
-            <i class="fas fa-search-location"></i>
-            <form id="search-form">
+
+            <div class="row">
+                
+            
+            <div class="col-7">  
+                <form id="search-form">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="floatingInput" placeholder="Lisbon">
                     <label for="floatingInput">Enter City here</label>
                 </div>
             </form>
-            <span>
-                <button class="btn btn-info w-65" id="current-location-button">
+            </div> 
+            <div class="col-5">
+                <div class= "current-location-column clearfix">
+                <i class="fas fa-search-location float-left"></i> 
+                <button class="btn btn-info float-right" id="current-location-button">
                     Current location
                 </button>
-            </span>
+                </div>    
+                </div>
+            
+            </div>
+        
 
             <div class="row">
                 <div class="col-sm-4">
@@ -55,7 +66,6 @@
                                     <p class="card-text"> <span id="lowest-temp">10</span>°C / <span
                                             id="highest-temp">18</span>°C </p>
 
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +84,6 @@
                                     <br />
                                     <br />
                                 </p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
                     </div>
@@ -87,8 +96,8 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">Your weather advice</h5>
-                                    <p class="card-text">Get your umbrella ready, and some boots to splash in puddles
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-text" id = "weather-advice">Get your umbrella ready, and some boots to splash in puddles
                                     </p>
                                 </div>
                             </div>
@@ -108,9 +117,7 @@
                         <h5 class="card-title">11/2</h5>
                         <p class="card-text">10°C / 18°C</p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+                    
                 </div>
                 <div class="card">
                     <i class="far fa-sun"></i>
@@ -118,9 +125,7 @@
                         <h5 class="card-title">12/2</h5>
                         <p class="card-text">10°C / 18°C</p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+                    
                 </div>
                 <div class="card">
                     <i class="far fa-sun"></i>
@@ -128,9 +133,7 @@
                         <h5 class="card-title">13/2</h5>
                         <p class="card-text">10°C / 18°C</p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+                    
                 </div>
                 <div class="card">
                     <i class="far fa-sun"></i>
@@ -138,9 +141,7 @@
                         <h5 class="card-title">14/2</h5>
                         <p class="card-text">10°C / 18°C</p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+                    
                 </div>
                 <div class="card">
                     <i class="far fa-sun"></i>
@@ -148,12 +149,11 @@
                         <h5 class="card-title">15/2</h5>
                         <p class="card-text">10°C / 18°C</p>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+                   
                 </div>
             </div>
-            <div id= "open-source"> <a href="https://github.com/Reshvinder/SheCodesChallenge">Open-source code</a> by Reshvinder Bhullar </div>
+            <div id="last-updated"> <small> last updated 3 mins ago </small>  </div>
+            <div id= "open-source"> <a href="https://github.com/Reshvinder/SheCodesChallenge"> <small>Open-source code</small></a> <small> by Reshvinder Bhullar </small> </div>
      
         </div>
   

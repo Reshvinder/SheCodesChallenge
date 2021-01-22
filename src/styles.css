@@ -4,18 +4,7 @@ body {
 h1 {
   color: #11698e;
   text-align: center;
-  margin: 0;
-}
-
-.form-floating {
-  width: 50%;
-  margin: 0px 50px;
-}
-.fa-search-location {
-  font-size: 38px;
-  display: inline;
-  position: relative;
-  top: 45px;
+  margin-bottom: 20px;
 }
 
 .mb-3 {
@@ -24,7 +13,9 @@ h1 {
 
 .fa-cloud-showers-heavy {
   font-size: 60px;
-  width: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+  text-size-adjust: 100%;
 }
 
 h5 {
@@ -42,9 +33,10 @@ h5 {
 }
 
 #umbrella-image {
-  border-radius: 30px;
-  width: 100%;
-  margin: auto;
+  border-radius: 10px;
+  width: 180px;
+  display: block;
+  margin: 10px 0 0 10px;
 }
 
 h3 {
@@ -65,13 +57,27 @@ h3 {
   max-width: 700px;
 }
 
-#current-location-button {
-  position: relative;
-  left: 400px;
-  bottom: 75px;
-  line-height: 44px;
+#last-updated {
+  margin-top: 10px;
 }
 
-#open-source {
-  margin-top: 10px;
+.fa-search-location {
+  font-size: 30px;
+  display: block;
+  position: relative;
+  bottom: -8px;
+  text-size-adjust: 100%;
+}
+
+.current-location-column {
+  margin: 5px 30px 0px 30px;
+}
+
+#description {
+  font-size: 24px;
+  font-weight: 900px;
+}
+
+#weather-advice {
+  font-size: 20px;
 }
