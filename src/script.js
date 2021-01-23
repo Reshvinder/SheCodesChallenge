@@ -1,8 +1,46 @@
+function displaycurrentdate (date) {
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat", "Sun"];
+let months = ["January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+
+  let currentYear = now.getFullYear();
+  let currentDay = days[now.getDay()];
+  let currentMonth = months[now.getMonth()];
+  let currentDate = now.getDate();
+  let currentHour = now.getHours ();
+  if (currentHour <10) {
+    currentHour = `0${currentHour}`;
+  }
+  let currentMin = now.getMinutes ();
+  if (currentMin <10) {
+    currentMin = `0${currentMin}`;
+  }
+
+  return `${currentDay} ${currentDate} ${currentMonth} ${currentYear}, ${currentHour}:${currentMin}`;
+
+}
+
 function displaycurrenttemp (response) {
   console.log (response.data);
 
+let temperatureElement = document.querySelector("#current-temp");
+celsiusTemperature = response.data.main.temp;
+temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+document.querySelector ("#current-temp").innerHTML = Math.round (response.data.main.temp);
+
   document.querySelector ("#city-name").innerHTML = response.data.name;
-  document.querySelector ("#current-temp").innerHTML = Math.round (response.data.main.temp);
   document.querySelector ("#lowest-temp").innerHTML = Math.round (response.data.main.temp_min);
   document.querySelector ("#highest-temp").innerHTML = Math.round (response.data.main.temp_max);
   document.querySelector ("#humidity").innerHTML = Math.round (response.data.main.humidity);
@@ -44,48 +82,23 @@ function getCurrentLocation (event){
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#currentTemp");
-  temperatureElement.innerHTML = 66;
+  let temperatureElement = document.querySelector("#current-temp");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#currentTemp");
-  temperatureElement.innerHTML = 15;
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#current-temp");
+   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
   
-function displaycurrentdate (date) {
-  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat", "Sun"];
-let months = ["January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ];
 
-  let currentYear = now.getFullYear();
-  let currentDay = days[now.getDay()];
-  let currentMonth = months[now.getMonth()];
-  let currentDate = now.getDate();
-  let currentHour = now.getHours ();
-  if (currentHour <10) {
-    currentHour = `0${currentHour}`;
-  }
-  let currentMin = now.getMinutes ();
-  if (currentMin <10) {
-    currentMin = `0${currentMin}`;
-  }
-
-  return `${currentDay} ${currentDate} ${currentMonth} ${currentYear}, ${currentHour}:${currentMin}`;
-
-}
 
 let currentDateTime = document.querySelector ("#current-date-time");
 let now = new Date ();
@@ -94,6 +107,7 @@ currentDateTime.innerHTML = displaycurrentdate (now);
 let currentLocationButton= document.querySelector ("#current-location-button");
 currentLocationButton.addEventListener ("click", getCurrentLocation);
 
+let celsiusTemperature = null;
 
 let searchForm= document.querySelector ("#search-form");
 searchForm.addEventListener ("submit", handleSubmit);
@@ -103,5 +117,7 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+
 
 searchCity("New York");

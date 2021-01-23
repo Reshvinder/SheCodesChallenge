@@ -80,3 +80,14 @@ h3 {
   vertical-align: bottom;
   margin-left: -10px;
 }
+
+.active {
+  color: #212529;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: #212529;
+}
